@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="shortcut icon" type="text/css" href="mortarboard.png">
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<script src="js/bootstrap.bundle.min.js"></script>
+	<title>E-learning</title>
+	<script>
+	function validateForm() {
+	  let x = document.forms["myForm"]["email"].value;
+	  if (x == "") {
+	    alert("Email must be filled out");
+	    return false;
+	  }
+	}
+	</script>
+	<script>
+	function validateForm() {
+	  let y = document.forms["myForm"]["name"].value;
+	  if (y == "") {
+	    alert("Name must be filled out");
+	    return false;
+	  }
+	}
+	</script>
+	<script>
+	function validateForm() {
+	  let z = document.forms["myForm"]["message"].value;
+	  if (z == "") {
+	    alert("Message must be filled out");
+	    return false;
+	  }
+	}
+	</script>
+	<script>
+	function validateForm() {
+	  let a = document.forms["myForm"]["phone"].value;
+	  if (a == "") {
+	    alert("Phone Number must be filled out");
+	    return false;
+	  }
+	}
+	</script>
+	<style type="text/css">
+		/* to add space between navbar and the text/image underneath*/
+		body::before{
+			display: block;
+			content: '';
+			height: 60px;
+		}
+		.item{
+			height: 300px;
+		}
+		.item img{
+			min-height: 500px;
+			top: 0;
+			left: 0;
+			object-fit: cover;
+			position: absolute;
+
+		}
+		.side-effect, .side-effect-menu {
+		  transition: all 0.1s;
+		  cursor: pointer;
+		  text-align: left;
+		}
+
+		.side-effect span, .side-effect-menu span {
+		  cursor: pointer;
+		  display: inline-block;
+		  position: relative;
+		  transition: 0.1s;
+		}
+		.side-effect span:after .side-effect-menu span:after {
+		  position: absolute;
+		  opacity: 0;
+		  top: 0;
+		  transition: 0.1s;
+		}
+
+		.side-effect:hover span{
+		  padding-right: 10px;
+		}
+		.side-effect-menu:hover span{
+			padding-right: 2px;
+		}
+
+		.side-effect:hover span:after, .side-effect-menu:hover span:after {
+		  opacity: 1;
+		  right: 0;
+		}
+		.side-effect a:hover{
+			color: grey;
+		}
+		.showcase-list{
+			text-align: left;
+			list-style-position: inside;
+			list-style-type: circle;
+		}
+		.image{
+			text-align: right;
+			height: 10%;
+			margin: 90px;
+			-ms-transform: rotate(20deg);
+  			transform: rotate(20deg);
+
+		}
+		.image1{
+			height: 10%;
+		}
+		.read-more {
+		  background-color: #787276;
+		  border-color: #787276;
+		  color: white;
+		  padding: 16px
+		  text-align: center;
+		  font-size: 16px;
+		  margin: 4px 2px;
+		  transition: 0.3s;
+		}
+
+		.read-more:hover {
+		  background-color: white;
+		  color: black;
+		  border-color: #787276;
+		}
+		.subject-button{
+			background-color: #787276;
+			border: 1px solid #787276;
+			color: white;
+		}
+		.subject-button:hover{
+			background-color: white;
+			color: black;
+			transition: 0.3s;
+		}
+		
+		.showcase-button:hover{
+			background-color: #6c757d;
+			color: white;
+			transition: 0.4s;
+			border: 0;
+		}
+		
+		.nav-color{
+			background-color: #045760;
+			color: white;
+		}
+		.blog{
+			transition: 0.4s;
+		}
+		.side-effect1 a:hover{
+			color: #484848;
+		}
+		.submit{
+			padding: 8px;
+			padding-top: 6px;
+			padding-bottom: 6px;
+			background-color: #787276;
+			color: white;
+			border: #787276;
+		}
+		.submit:hover{
+			background-color: #484848;
+			transition: 0.4s;
+		}
+		.quick-link{
+			text-align: center;
+		}
+		.legal-item{
+			text-align: center;
+		}
+		.second-footer{
+			background: #B8BCC0;
+		}
+		.second-footer-ul{
+			list-style-type: none;
+		}
+		.second-footer-ul a{
+			text-decoration: none;
+			color: black;
+			text-align: center;
+		}
+		.arrow{
+			left: 50%;
+		}
+		.footer-img{
+			text-align: right;
+		}
+		.footer-img img:hover{
+			opacity: 0.6;
+		}
+		.footer-list{
+			list-style-type: none;
+		}
+		.footer-list a{
+			color: black;
+			text-decoration: none;
+		}
+		.footer{
+			color: black;
+		}
+		
+	</style>
+</head>
+<body>
+								<!-------------------------Navbar------------------------->
+
+<div id="home"></div>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top nav-color">	
+	<div class="container">
+		<a href="#home" class="navbar-brand">E-learning &nbsp;<img src="online-course.png" width="30" align="center"></a>
+		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navmenu">
+			<ul class="navbar-nav ms-auto">
+				<li class="nav-item side-effect-menu">
+					<span><a href="#home" class="nav-link">Home</a></span>
+				</li>
+				<li class="nav-item side-effect-menu">
+					<span><a href="#learn" class="nav-link">Subjects</a></span>
+				</li>
+				<li class="nav-item side-effect-menu">
+					<span><a href="#benefits" class="nav-link">Benefits</a></span>
+				</li>
+				<li class="nav-item side-effect-menu">
+					<span><a href="#questions" class="nav-link">FAQs</a></span>
+				</li>
+				<li class="nav-item side-effect-menu">
+					<span><a href="#about-us" class="nav-link">About Us</a></span>
+				</li>
+				<li class="nav-item side-effect-menu">
+					<span><a href="#contact-us" class="nav-link">Contact Us</a></span>
+				</li>
+			</ul>
+		</div>
+	</div>
+	
+</nav>
+											<!-------SHOWCASE------->
+
+<div class="showcase text-light text-center p-5 bg-secondary">
+	<div class="container">
+		<div class="d-md-flex align-items-center justify-content-between">
+			<div>
+				<br>
+				<h1 class="display-6"><strong>Online Education For Everyone!</strong></h1>
+				<br>
+				<p class="lead"><em>Enroll Your Child To The Best Online Learning Platform</em></p>
+				<br>
+				<br>
+				<ul class="showcase-list lead text-light">
+					<li>
+						Amongst the most <span class="text-warning"><strong>Affordable</strong></span>
+						<br>
+					</li>
+					<li>
+						<span class="text-warning"><strong>Bachelor's</strong></span> and <span class="text-warning"><strong>Master's</strong></span> programs
+					</li>
+					<li>
+						Flexible <span class="text-warning"><strong>Online</strong></span> and <span class="text-warning"><strong>Remote</strong></span> learning 
+					</li>
+				</ul>
+				<br>
+				<button class="btn btn-warning showcase-button">Learn Now</button>
+				<button class="btn btn-info showcase-button">Teach Now</button>
+			</div>
+
+			<h1 class="text-center"><img class="img-fluid image1 d-none d-sm-block"width="70%" src="man.png"></h1>
+		</div>
+		
+	</div>
+									<!------BLOGS------>
+
+							
+</div>
+<br>
+<div class="p-5 blog">
+		<div class="container">
+			<div class="row text-center g-4">
+				<div class="col-md">
+					<div class="card" style="width: 18rem;">
+					  <img src="blog1.jpg" class="card-img-top"alt="...">
+					  <div class="card-body">
+					    <h5 class="card-title">Which comes first: motivation or achievement?</h5>
+					    <p class="card-text">What seems like a chicken-and-egg situation in children's learning is actually a feedback loop.UNESCO evaluates that by 2025, more than 100 million young education pursuers will try to get admitted.</p>
+					    <a href="https://bold.expert/?gclid=EAIaIQobChMI57r74ebU8gIVw4TVCh1XZgEpEAAYAiAAEgKx1PD_BwE" class="btn read-more " target="_blank">Read More</a>
+					  </div>
+					</div>
+				</div>
+
+				<div class="col-md">
+					<div class="card" style="width: 18rem;">
+					  <img src="blog2.jpg" class="card-img-top" alt="...">
+					  <div class="card-body">
+					    <h5 class="card-title">5 advantages of Online Education</h5>
+					    <p class="card-text">Online education revolution happened way back and it has been alleviating the prohibitive constraints of traditional learning since then.</p>
+					    <a href="https://onlineeducationportal.us/blog-details.php?id=2" class="btn read-more">Read More</a>
+					  </div>
+					</div>
+				</div>
+
+				<div class="col-md">
+					<div class="card" style="width: 18rem;">
+					  <img src="blog3.jpg" class="card-img-top" alt="...">
+					  <div class="card-body">
+					    <h5 class="card-title">Breaking Management System Myths</h5>
+					    <p class="card-text">Technological innovations are at a high all the time. It is natural to feel that technology in modern times is too fast paced to keep up with.</p>
+					    <a href="https://onlineeducationportal.us/blog-details.php?id=3" class="btn read-more">Read More</a>
+					  </div>
+					</div>
+				</div>
+				
+			</div>
+
+			
+		</div>
+		
+	</div>
+
+												<!-------SUBJECTS-------->
+<div class="p-5" id="learn">
+	<br>
+	<br>
+<h1 class="display-6 text-center"><strong>SUBJECTS</strong></h1>
+	<br>
+	<br>
+	<div class="container">
+		<div class="row align-items-center justify-content-between">
+			<div class="col-md text-center">
+				<img src="physics-subject.png" class="img-fluid physics-img" width="50%">
+			</div>
+			<div class="col-md p-5">
+				<h3>Physics</h3>
+				<p class="lead">
+					Physics is the natural science that studies matter, its motion and behavior through space and time, and the related entities of energy and force. Physics is one of the most fundamental scientific disciplines, and its main goal is to understand how the universe behaves.
+				</p>
+				<button class="btn subject-button">Start Now</button>
+			</div>
+		</div>
+		
+	</div>
+	<hr>
+	<div class="container">
+		<div class="row align-items-center justify-content-between">
+			<div class="col-md text-center">
+				<img src="chemistry.png" class="img-fluid" width="50%">
+			</div>
+			<div class="col-md p-5">
+				<h3>Chemistry</h3>
+				<p class="lead">
+					Chemistry is the scientific study of the properties and behavior of matter. It is a natural science that covers the elements that make up matter to the compounds composed of atoms, molecules and ions.
+				</p>
+				<button class="btn subject-button">Start Now</button>
+			</div>
+		</div>
+		
+	</div>
+
+	<hr>
+	<div class="container">
+		<div class="row align-items-center justify-content-between">
+			<div class="col-md text-center">
+				<img src="math.png" class="img-fluid" width="50%">
+			</div>
+			<div class="col-md p-5">
+				<h3>Mathematics</h3>
+				<p class="lead">
+					Mathematics includes the study of such topics as quantity, structure, space, and change. It has no generally accepted definition. Mathematicians seek and use patterns to formulate new conjectures; they resolve the truth or falsity of such by mathematical proof.
+				</p>
+				<button class="btn subject-button">Start Now</button>
+			</div>
+		</div>
+		
+	</div>
+</div>	
+
+									<!-----BENEFITS------>
+<br>
+<div class="container-fluid bg-light" id="benefits">
+	<br>
+	<br>
+	<br>
+	<br>
+	<h1 class="display-6 text-center"><strong>BENEFITS</strong></h1>
+	<br>
+	<p class="lead text-center">It is our mission to give you the best learning experiences that work.</p>	
+	<div class="container px-4">
+	  <div class="row gx-5">
+	    <div class="col">
+	     <div class="p-3"><p class="text-center lead"><img src="computing.png" width="40%"><br><br>Connects the administrative staff, teachers, students and parents on a single platform to teach and learn from any device including desktops, laptops, tablets, and smart phones.</p></div>
+	    </div>
+	    <div class="col">
+	     <div class="p-3"><p class="text-center lead"><img src="shield.png" width="40%"><br><br>Protects the intellectual property and data, especially the content of your educational institutes from getting leaked or circulated beyond your stakeholders.</p></div>
+	    </div>
+	    <div class="col">
+	     <div class="p-3"><p class="text-center lead"><img src="calculator.png" width="40%"><br><br>Enjoy seamless and lifelong learning experiences through subscribing to our portal that has a built-in LMS with high-end features.</p></div>
+	    </div>
+	    <br>
+	    <br>
+
+  </div>
+  <div class="container px-4">
+	  <div class="row gx-5">
+	    <div class="col">
+	     <div class="p-3"><p class="text-center lead"><img src="online-support.png" width="40%"><br><br>Get an LMS with a round- the-clock support from anywhere and anytime.</p></div>
+	    </div>
+	    <div class="col">
+	     <div class="p-3"><p class="text-center lead"><img src="servers.png" width="40%"><br><br>Easy and smooth integration with any server and domain of your choice.</p></div>
+	    </div>
+	    <div class="col">
+	     <div class="p-3"><p class="text-center lead"><img src="portal.png" width="40%"><br><br>A single platform with multiple features and personalized dashboards for admins, teachers, students and parents.</p></div>
+	    </div>
+	  </div>
+	</div>
+</div>
+</div>
+
+									<!----Questions------>
+
+<section class="p-5" id="questions">
+	<br>
+	<br>
+	<div class="container">
+		<h1 class="display-6 text-center mb-4"><strong>Frequently Asked Questions</strong></h1>
+
+		<!--item 1-->
+		<div class="accordion accordion-flush" id="example1">
+		  <div class="accordion-item">
+		    <h2 class="accordion-header" id="example">
+		      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+		        What Is An LMS?
+		      </button>
+		    </h2>
+		    <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="example" data-bs-parent="#example1">
+		      <div class="accordion-body">A learning management system (LMS) helps an organization to manage its learning activities and competencies. It allows you to carry out administrative chores, take virtual classes, load content (courses, tests, resources), specify who receives what content, and track progress reports.</div>
+		    </div>
+		  </div>
+
+		  <!--item 2-->
+		  <div class="accordion-item">
+		    <h2 class="accordion-header" id="example2">
+		      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+		        Can We Get A Demo Viewer Buying It?
+		      </button>
+		    </h2>
+		    <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="example2" data-bs-parent="#accordionFlushExample">
+		      <div class="accordion-body">“Absolutely YES”! Our experts will walk you through the platform and demonstrate the features of the LMS so that you can see yourself how easy it is to use and implement in your organisation.</div>
+		    </div>
+		  </div>
+
+		  <!--item 3-->
+		  <div class="accordion-item">
+		    <h2 class="accordion-header" id="example3">
+		      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+		        What Kind Of Support Can We Expect From You?
+		      </button>
+		    </h2>
+		    <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="example3" data-bs-parent="#accordionFlushExample">
+		      <div class="accordion-body">You can expect to get a quick response and effective resolution within 24 hours. We will readily answer all your queries and capably try to resolve your problems.</div>
+		    </div>
+		  </div>
+
+		  <!--item 4-->
+		  <div class="accordion-item">
+		    <h2 class="accordion-header" id="example4">
+		      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+		        What Is Costing?
+		      </button>
+		    </h2>
+		    <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="example4" data-bs-parent="#accordionFlushExample">
+		      <div class="accordion-body">We follow a different approach towards budgets, operations and challenges. We would like to discuss with you and provide tailor made-quote that is specific to those unique needs.</div>
+		    </div>
+		  </div>
+
+		  <!-- item 5-->
+		  <div class="accordion-item">
+		    <h2 class="accordion-header" id="example5">
+		      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
+		        What Is Ideal Size of The Desk Team?
+		      </button>
+		    </h2>
+		    <div id="flush-collapseFive" class="accordion-collapse collapse" aria-labelledby="example5" data-bs-parent="#accordionFlushExample">
+		      <div class="accordion-body">Our LMS is specially designed to support any-sized organisation and achieve the highest level of success.</div>
+		    </div>
+		  </div>
+		</div>
+	</div>
+</section>
+
+									<!---ABOUT US---->
+
+<section class="p-5 bg-light" id="about-us">
+	<br>
+	<br>
+	<div><h1 class="display-6 text-center mb-4"><strong>About Us</strong></h1>
+	<div class="container">
+		<div class="container px-4">
+		  <div class="row gx-5">
+		    <div class="col-md">
+		     <div class="p-3 bg-light"><img src="scholars.jpg" width="90%"></div>
+		    </div>
+		    <div class="col-md">
+		    	<br>
+		      <br>Targetorate Consulting is a Global Digital Transformation Accelerator empowering growth for businesses across industries by increasing their customer reach and taking them to newer markets across geographies. Backed by a robust delivery center in India and with a strong foothold in the US market, we serve organizations from all corners of the globe. We specialize in providing Digital Marketing, Digital Enablement, Technology Consulting, Business Consulting and Go-To-Market Services. Our services do include industry-specific solutions.</div>
+		    </div>
+		  </div>
+		</div>
+	</div>
+	
+</section>
+
+							<!---CONTACT US--->
+
+<section class="p-5" id="contact-us">
+<br>
+<br>
+	<div><h1 class="display-6 text-center mb-4"><strong>How To Find Us?</strong></h1>
+		<div class="container px-4">
+		  <div class="row gx-5">
+		  	<div class="col-md">
+		      <div class="p-3">
+		      	<form name="myForm" action="/action_page.php" onsubmit="return validateForm()" method="post">
+		      		<br>
+		      		<div class="mb-3">
+					  <input type="text" class="form-control" name="name" id="exampleFormControlInput" placeholder="Name">
+					</div>
+		      		<div class="mb-3">
+					  <input type="email" class="form-control" name="email" id="exampleFormControlInput1" placeholder="Email">
+					</div>
+					<div class="mb-3">
+					  <input type="text" class="form-control" name="phone" id="exampleFormControlInput" placeholder="Phone Number">
+					</div>
+					<div class="mb-3">
+					  <textarea class="form-control" name="message" id="exampleFormControlTextarea1" placeholder="Message" rows="3" maxlength="100"></textarea>
+					</div>
+					<div class="mb-3 text-center">
+						<button class="form-control btn btn-dark">Submit</button>
+					</div>
+		      	</form>
+		      </div>
+		    </div>
+		    <div class="col-md">
+
+		     <div class="p-3">
+		     	<ul class="list-group list-group-flush">
+		     		<li class="list-group-item">
+		     			<span class="fw-bold">Main Location:</span> Lalkurti, Rawalpindi
+		     			
+		     		</li>
+		     		<li class="list-group-item">
+		     			<span class="fw-bold">Phone Number:</span> 051-5187052
+		     			
+		     		</li>
+		     		<li class="list-group-item">
+		     			<span class="fw-bold">Email:</span> fareedjaved203@gmail.com		     			
+		     		</li>
+		     		<li class="list-group-item text-center">
+		     			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3323.994198864097!2d73.05880631465958!3d33.579499880737224!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38df934dc1484843%3A0x33add87f734fbe92!2sNUML%20Rawalpindi!5e0!3m2!1sen!2s!4v1604427847755!5m2!1sen!2s">MAPS</iframe>	     			
+		     		</li>
+		     	</ul>
+		     </div>
+		    </div>
+		  </div>
+		</div>
+</section>
+
+							<!---- footer---->
+
+<section class="p-0 second-footer bg-light">
+	<div class="container">
+		<div class="container px-4">
+		  <div class="row gx-5">
+		    <div class="col-md text-center">
+		     <div class="p-3"><p class="h3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>General Enquiry</strong></p></div>
+		     <br>
+		     <ul class="footer-list text-center">
+		     	<li class="side-effect1 text-center">
+		     		<span><a href="#top">&nbsp;&nbsp;<img src="global.png" width="8%"> &nbsp;www.education.com</a></span>	     			     		
+		     	</li>
+		     	<li class="side-effect1 text-center">
+		     		<br>
+		     		<span><a href="fareedjaved203@gmail.com">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="email.png" width="8%"> &nbsp;fareedjaved203@gmail.com</a><span>	     				     		
+		     	</li>
+		     	<li class="side-effect1 text-center">
+		     		<br>
+		     		<span><img src="phone-call.png" width="8%" align="center"> &nbsp;0314-5292649</span>
+		     	</li>
+		     	
+		     </ul>
+		     <br>
+		     <br>
+		    </div>
+		    
+		    <div class="col-md text-center">
+		      <div class="p-3"><p class="h3 quick-link">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Follow Us</strong></p></div>
+		      <ul class="second-footer-ul">
+		      	<li class="legal-item side-effect text-center">
+		      		<span><a href="https://www.facebook.com">&nbsp;<img src="facebook-circular-logo.png" width="10%">&nbsp; Facebook</a></span>
+		      	</li>
+		      	<br>
+		      	<li class="legal-item side-effect text-center">
+		      		<span><a href="https://www.instagram.com">&nbsp;&nbsp;<img src="instagram.png" width="10%">&nbsp; Instagram</a></span>
+		      	</li>
+		      	<br>
+		      	<li class="legal-item side-effect text-center">
+		      		<span><a href="https://www.linkedin.com"><img src="linkedin.png" width="10%">&nbsp; LinkedIn</a></span>
+		      	</li>
+		      </ul>
+		    </div>
+		    <div class="col-md text-center">
+		      <div class="p-3"><p class="h3 quick-link"><strong>Explore</strong></p></div>
+		      	<div class="row g-2">
+				    <div class="col-6">
+				      <div class="p-3">
+				      	<ul class="second-footer-ul">
+				      		<li  class="side-effect text-center">
+				      			<span><a href="#home"><img src="home.png" width="25%"> &nbsp;Home</a></span>
+				      		</li>
+				      		<li  class="side-effect text-center">
+				      			<br>
+				      			<span><a href="#learn"><img src="books-stack-of-three.png" width="25%"> &nbsp;<span>Topics</a></span>
+				      		</li>
+				      		<li  class="side-effect text-center">
+				      			<br>
+				      			<span><a href="#benefits"><img src="percentage.png" width="25%"> &nbsp;Benefits</a></span>
+				      		</li>
+				      		
+				      		
+				      	</ul>
+				      </div>
+				    </div>
+				    <div class="col-6">
+				      <div class="p-3">
+				      	<ul class="second-footer-ul">
+				      		<li  class="side-effect text-center">
+				      			<span><a href="#questions"><img src="help.png" width="25%">&nbsp;FAQs</a></span>
+				      		</li>
+				      		<li  class="side-effect text-center">
+				      			<br>
+				      			<span><a href="#about-us"><img src="profile-user.png" width="25%">&nbsp;About</a></span>
+				      		</li>
+				      		<li  class="side-effect text-center">
+				      			<br>
+				      			<span><a href="#contact-us"><img src="contact.png" width="25%">&nbsp;Contact</a></span>
+				      		</li>
+				      	</ul>
+				      </div>
+				    </div>
+				    
+				    
+		      </div>
+		    </div>
+		    
+		  </div>
+		</div>	
+			
+	</div>
+
+</section>
+
+<footer class="p-2 text-left footer bg-light">
+	<hr>
+	<div class="container">
+		<br>
+		<p class="text-center">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="online-course.png" width="4%">&nbsp;<strong class="lead"><b>E-learning</b></strong> &copy; Fareed 2021, All rights reserved.<a href="#top" class="d-none d-sm-block footer-img fixed-bottom"><img src="up-arrow.png" width="3%"></p></a>
+		
+	</div>
+</footer>
+</body>
+</html>
